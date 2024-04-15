@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "sweetalert2": "^11.10.7"
+  }
+}

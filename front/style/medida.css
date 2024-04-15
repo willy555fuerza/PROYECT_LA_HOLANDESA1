@@ -1,0 +1,454 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+/**********************hearder-sidebar-footer-main-submenu*************************/
+.container{
+    overflow: hidden;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/b7d2c4170993355.6467298724117.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    grid-template-columns: 220px 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 1fr 70px;
+    grid-template-areas:
+    "sidebar header header"
+    "sidebar content-1 content-1"
+    "sidebar content-2 content-2"
+    "sidebar content-2 content-2"
+    "sidebar footer footer";
+
+}
+/***header-nav-hidden***/
+.header{
+    grid-area: header;
+    width: 100%;
+}
+
+.header .nav-hidden{
+    width: 70px;
+    height: 80%;
+    font-size: 30px;
+    color: white;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0202027e;
+    backdrop-filter: blur(15px);
+    border-radius: 0 10px 10px 0;
+}
+/***logo-header.***/
+
+/**/
+
+/***logo-nav***/
+.sidebar{
+    grid-area: sidebar;
+    background: #0202027e;
+    backdrop-filter: blur(15px);
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows: 80px 1fr 110px;
+    grid-template-areas:
+    "logo"
+    "nav"
+    "Logout"    
+    ;
+}
+
+.logo{
+    grid-area: logo;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    place-content: center;
+}
+
+.nav{
+    grid-area: nav;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.nav::-webkit-scrollbar{
+    background-color: transparent;
+    width: 5px;
+}
+
+.nav::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.445);
+    width: 5px;
+    border-radius: 10px;
+}
+
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.nav ul li{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    width: 95%;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    transition: all .7s ease-out;
+}
+
+.nav ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.445);
+}
+
+.nav ul li a span{
+    visibility: visible;
+}
+
+.logout-user{
+    grid-area: Logout;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.logout-user .user {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.logout-user .user a{
+    width: 40px;
+    height: 70%;
+    border-radius: 50%;
+    border: 1px solid white;
+    overflow: hidden;
+}
+.logout-user .user img{
+    display: flex;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.logout-user .logout{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.logout-user .logout button{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    padding-left: 15px;
+    border-radius: 0 10px 10px 0;
+    transition: all .7s ease-out;
+    border: none;
+    gap: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.logout-user .logout button:hover{
+    background-color: rgba(255, 255, 255, 0.445);
+}
+/***logo-nav.***/
+
+/**/
+
+/***nombre_tabla-usuario-serch-creteuser-activos***/
+.content-1{
+    grid-area: content-1;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.content-1 .content_h1{
+    background: #0202027e;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.content-1 .content_h1 .h1{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 30%;
+}
+
+.content-1 .content_h1 .btn-regis-total{
+    width: 95%;
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-1 .content_h1 .btn-regis-total .total span{
+    display: flex;
+    gap: 5px;
+}
+
+.content-1 .content_h1 .btn-regis-total .btn input{
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    background: transparent;
+    transition: all .7s ease-out;
+}
+
+.content-1 .content_h1 .btn-regis-total .btn input:hover{
+    background-color: rgba(255, 255, 255, 0.445);
+}
+.content-1 .content_h1 .btn-regis-total .btn input:active{
+    background-color: rgb(0, 0, 0);
+}
+
+.content-1 .content_h1 .content-button-serch{
+    width: 95%;
+    height: 35%;
+}
+
+.content-1 .content_h1 .content-button-serch .search-activos{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 70px;
+}
+
+.content-1 .content_h1 .content-button-serch .search-activos input{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    border:1px solid  white;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: transparent;
+    transition: all .7s ease-out;
+}
+.content-1 .content_h1 .content-button-serch .search-activos input:hover{
+    background-color: rgba(255, 255, 255, 0.445);
+}
+
+.content-1 .content_h1 .content-button-serch .search-activos select{
+    appearance: none;
+    text-align: center;
+    border:1px solid  white;
+    background: transparent;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+    color: white;
+    transition: all .7s ease-out;
+}
+.content-1 .content_h1 .content-button-serch .search-activos select option{
+    background-color: rgba(17, 14, 14, 0.445);
+    color: black;
+}
+.content-1 .content_h1 .content-button-serch .search-activos select:hover{
+    background-color: rgba(255, 255, 255, 0.445);
+}
+
+/* Estilos CSS para el formulario de registro */
+.form-registro {
+    overflow: auto;
+    display: none;
+    opacity: 0; /* Oculta el formulario por defecto */
+    position: absolute; /* Establece la posición absoluta */
+    top: 10%; /* Posiciona el formulario en la mitad superior */
+    left: 35%; /* Posiciona el formulario en la mitad izquierda */
+    transform: scale(.5); /* Centra el formulario horizontal y verticalmente */
+    max-width: 400px; /* Ancho máximo del formulario */
+    padding: 20px;
+    background: #0202027e;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    color: white; /* Color del texto */
+    z-index: 99; /* Asegura que el formulario esté encima de otros elementos */
+}
+
+.form-registro-visible{
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.form-registro h2{
+    width: 100%;
+    text-align: center;
+    position: static;
+}
+
+/* Estilos para los campos del formulario */
+.form-registro div {
+    margin-bottom: 15px; /* Espaciado entre los campos */
+}
+
+.form-registro label {
+    display: block; /* Hace que las etiquetas estén en una línea separada */
+    margin-bottom: 5px; /* Espaciado inferior de las etiquetas */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.form-registro input[type="text"],
+.form-registro input[type="password"],
+.form-registro input[type="submit"],
+.form-registro input[type="date"],
+.form-registro input[type="file"],
+.form-registro select{
+    outline: none;
+    appearance: none;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris */
+    background-color: #fff; /* Fondo blanco */
+}
+
+.form-registro input[type="submit"] {
+    background-color: #117522; /* Color de fondo del botón de envío */
+    color: white; /* Color del texto del botón de envío */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+.form-registro input[type="submit"]:hover {
+    background-color: #3f6149; /* Cambia el color de fondo al pasar el ratón */
+}
+
+
+/***nombre_tabla-usuario-serch-creteuser-activos***/
+
+/**/
+
+/***search-activos-registro***/
+.content-2{
+    grid-area: content-2;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-2 .content_h2{
+    background: #0202027e;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.content-2 .content_h2 table{
+    border-collapse: collapse;
+    border: none;
+    width:95%;
+}
+
+.content-2 .content_h2 table th, td {
+     /*border: 1px solid #ddd;*/
+     padding: 8px;
+     text-align: center;
+     border-bottom: 1px solid white;
+}
+
+.content-2 .content_h2 table th {
+    background-color: rgba(255, 255, 255, 0.445);
+}
+
+.btn-state{
+    width: 80%;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    padding: 1px;
+    font-size:20px;
+}
+
+.button-eliminar-editar{
+    background-color: #117522;
+    border-radius: 10px;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+}
+
+.button-eliminar-editar button{
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.button-eliminar-editar .editar{
+    background-color: tomato;
+}
+.editar.active {
+    background-color: green;
+  }
+
+.button-eliminar-editar .estado{
+    background-color: red;
+}
+/***search-activos-registro...***/
+
+/**/
+
+
+
+.footer{
+    grid-area: footer;
+    grid-row: 5/6;
+    grid-column: 2/4;
+
+}
+
+
+/**********************hearder-sidebar-footer-main-submenu*************************/
+/**/
+

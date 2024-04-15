@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../back/node_modules/@flaticon/flaticon-uicons/css/solid/rounded.css" rel="stylesheet">
+    <link href="../../back/node_modules/@flaticon/flaticon-uicons/css/solid/all.css" rel="stylesheet">
+    <link href="../../back/node_modules/@flaticon/flaticon-uicons/css/solid/straight.css" rel="stylesheet">
+    <link href="../../back/node_modules/@flaticon/flaticon-uicons/css/all/all.straight.css" rel="stylesheet">
+    <link href="../../back/node_modules/@flaticon/flaticon-uicons/css/all/all.rounded.css" rel="stylesheet">
+    <link href="../../back/node_modules/@flaticon/flaticon-uicons/css/all/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../back/node_modules/@flaticon/flaticon-uicons/css/regular/rounded.css">
+    <link rel="stylesheet" href="../../back/node_modules/@flaticon/flaticon-uicons/css/regular/straight.css">
+    <link rel="stylesheet" href="../../back/node_modules/@flaticon/flaticon-uicons/css/regular/all.css">
+    <link rel="stylesheet" href="../../back/node_modules/@flaticon/flaticon-uicons/css/brands/all.css">
+    <link rel="stylesheet" href="../../back/node_modules/@flaticon/flaticon-uicons/css/bold/all.css">
+    <link rel="stylesheet" href="../../back/node_modules/@flaticon/flaticon-uicons/css/bold/rounded.css">
+    <link rel="stylesheet" href="../../back/node_modules/@flaticon/flaticon-uicons/css/bold/straight.css">
+    <link rel="stylesheet" href="../style/categoria.css">
+    <link rel="stylesheet" href="../style/node_modules/normalize.css/normalize.css">
+    <title>Inicio💻</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">
+            <div class="nav-hidden">
+                <i class="fi fi-br-menu-burger"></i>
+            </div>
+        </div>
+        <div class="item sidebar">
+            <div class="logo">
+              <img src="../img/queso.png" alt="logo">  
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../pages/inicio.html">&nbsp;<i class="fi fi-ss-house-chimney-user"></i>&nbsp;<span>Inicio</span></a></li>
+                    <li><a href="../pages/usuarios.html">&nbsp;<i class="fi fi-sr-users-alt"></i>&nbsp;<span>Usuario</span></a></li>
+                    <li><a href="../pages/categoria.html">&nbsp;<i class="fi fi-rr-category-alt"></i>&nbsp;<span>Categoria</span></a></li>
+                    <li><a href="../pages/medidas.html">&nbsp;<i class="fi fi-rr-scale"></i>&nbsp;<span>Medidas</span></a></li>
+                    <li><a href="../pages/productos.html">&nbsp;<i class="fi fi-rr-boxes"></i>&nbsp;<span>Productos</span></a></li>
+                    <li><a href="../pages/proveedor.html">&nbsp;<i class="fi fi-rs-truck-side"></i>&nbsp;<span>Proveedor</span></a></li>
+                    <li><a href="../pages/compra.html">&nbsp;<i class="fi fi-rr-hand-holding-box"></i>&nbsp;<span>Compra</span></a></li>
+                    <li><a href="../pages/venta.html">&nbsp;<i class="fi fi-rr-shopping-cart-add"></i>&nbsp;<span>Venta</span></a></li>
+                    <li><a href="../pages/cliente.html">&nbsp;<i class="fi fi-sr-user-headset"></i>&nbsp;<span>Cliente</span></a></li>
+                </ul>
+            </nav>
+            <div class="logout-user" >
+                <div class="user">
+                    <a href="#"><img src="../img/usuario.png" alt="user"></a>
+                </div>
+                <div class="logout" >
+                    <button id="logout-session" type="button"><i class="fi fi-bs-enter"></i><p>Logout</p></button>
+                </div>
+            </div>
+        </div>
+        <div class="item content-1">
+            <div class="content_h1">
+                <div class="h1">
+                    <h1>Registro categoria</h1>
+                </div>
+                <div class="btn-regis-total">
+                    <div class="total">
+                        <span>Total:<p>10</p></span>
+                    </div>
+                    <div class="btn">
+                        <input id="btnAgregarUsuario" type="button" value="Crear Categoria" onkeyup="mayus(this);">
+                    </div>
+                </div>
+                <form id="myForm" class="form-registro">
+                    <h2>Registro de categoria</h2>
+                    <div>
+                        <label for="nombre_categoria">Nombre de la categoría:</label>
+                        <input type="text" id="nombre_categoria" name="nombre_categoria" onkeyup="mayus(this);" required>
+                    </div>
+                    <div>
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" id="descripcion" name="descripcion" onkeyup="mayus(this);" required>
+                    </div>
+                    <!-- <div>
+                        <label for="fecha_registro">Fecha Registro:</label>
+                        <input type="date" id="fecha_registro" name="fecha_registro" required>
+                    </div> -->
+                    <div>
+                        <input type="submit" value="Registrar">
+                    </div>
+                </form>
+                <div class="content-button-serch">
+                    <div class="search-activos">
+                        <input type="search" value="" placeholder="Buscar........🔍">
+                        <select>
+                            <option value="Activos">Activos</option>
+                            <option value="Inactivos">Inactivos</option>
+                        </select>
+                    </div>
+                    
+                </div>
+            </div>      
+        </div>
+        <div class="item content-2">
+            <div class="content_h2">
+                <table class="table" id="usuarios-table">
+                    <thead>
+                            <th>#</th>
+                            <th>Nombres</th>
+                            <th>Descripcion</th>
+                            <th>Fecha registro</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                    </thead>
+                    <tbody id="categorias">
+                    <!-- Los datos de los usuarios se insertarán aquí -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="item footer"></div>  
+    </div>
+    
+
+    <script src="../js/login-logout/cerrar_sesion.js"></script>
+    <script src="../js/categoria.js"></script>
+    <script src="../style/node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+    <script>
+        // JavaScript para mostrar/ocultar el formulario
+        document.addEventListener("DOMContentLoaded", function() {
+            const btnAgregarUsuario = document.querySelector('#btnAgregarUsuario');
+            const formAgregarUsuario = document.querySelector('#myForm');
+
+            btnAgregarUsuario.addEventListener("click", function(event) {
+                event.stopPropagation(); // Detiene la propagación del evento
+                formAgregarUsuario.classList.toggle('form-registro-visible'); // Muestra el formulario
+            });
+
+            formAgregarUsuario.addEventListener("submit", function(event) {
+                event.stopPropagation(); // Detiene la propagación del evento
+                formAgregarUsuario.classList.toggle('form-registro-visible'); // Oculta el formulario después de enviarlo
+                // Aquí puedes agregar código para manejar el envío del formulario
+            });
+
+            window.addEventListener("click", function(event) {
+                if (!event.target.matches("#btnAgregarUsuario") && !formAgregarUsuario.contains(event.target)) {
+                    if (formAgregarUsuario.classList.contains('form-registro-visible')) {
+                        formAgregarUsuario.classList.remove('form-registro-visible'); // Quita la clase para ocultar el formulario
+                    }
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

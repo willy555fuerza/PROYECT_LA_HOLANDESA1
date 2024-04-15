@@ -1,0 +1,117 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+/**********************LOGIN**************************/
+body {
+    background: url(../img/b7d2c4170993355.6467298724117.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 12px;
+    padding: 10px 20px;
+    background: transparent;
+    backdrop-filter: blur(6px);
+    box-shadow: 5px 5px 10px 0 rgb(0, 0, 0,.5);
+}
+
+.wrapper h2{
+    font-size: 30px;
+    color: #fffefe;
+}
+
+.input-field{
+    position: relative;
+}
+
+.input-field input[type="text"],
+.input-field input[type="password"]{
+    border-radius: 10px;
+    background: transparent;
+    margin: 15px;
+    border: 2px solid rgb(255, 255, 255);
+    width: 280px;
+    height: 2px;
+    padding: 20px 40px 20px 20px;
+    backdrop-filter: blur(15px);
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    color: rgb(0, 0, 0);
+}
+
+input::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+.input-field input[type="text"]:focus::placeholder,
+.input-field input[type="password"]:focus::placeholder{
+    transform: translateY(-160%);
+    transition:  transform .2s ease-in-out;
+    font-size: 16px;
+}
+
+.input-field input[type="text"]:not(:focus)::placeholder,
+.input-field input[type="password"]:not(:focus)::placeholder{
+    transform: translateY(0%);
+    transition:  transform .2s ease-in-out;
+    font-size: 14px;
+}
+
+a.forgot{
+    text-decoration: none;
+    position: relative;
+    color: rgb(255, 255, 255,.772);
+}
+
+a.forgot:hover{
+    text-decoration: underline;
+    color: #fffffffd;
+}
+
+
+a.sign-up{
+    text-decoration: none;
+    color: rgb(255, 255, 255,.772);
+}
+
+a.sign-up:hover{
+    text-decoration: underline;
+    color: #fffffffd;
+}
+
+.wrapper .login{
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 45px;
+    border-radius: 45px;
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+
+
+
